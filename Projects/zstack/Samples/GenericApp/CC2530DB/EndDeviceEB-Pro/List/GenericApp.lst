@@ -1,0 +1,756 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         13/Sep/2014  00:18:04 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\Source\GenericApp.c          #
+#    Command line       =  -f E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î #
+#                          ◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\z #
+#                          stack\Samples\GenericApp\CC2530DB\..\..\..\Tools\C #
+#                          C2530DB\f8wEndev.cfg (-DCPU32MHZ                   #
+#                          -DROOT=__near_func -DBLINK_LEDS) -f                #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\Tools\CC25 #
+#                          30DB\f8wConfig.cfg (-DSECURE=0                     #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\Source\GenericApp.c -D       #
+#                          ZIGBEEPRO -D NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK  #
+#                          -D MT_SYS_FUNC -D MT_ZDO_FUNC -D                   #
+#                          LCD_SUPPORTED=DEBUG -D xPOWER_SAVING -lC           #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\EndDeviceEB-Pro\Lis #
+#                          t\ -lA E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶ #
+#                          ”√”Î◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projec #
+#                          ts\zstack\Samples\GenericApp\CC2530DB\EndDeviceEB- #
+#                          Pro\List\ --diag_suppress Pe001,Pa010 -o           #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\EndDeviceEB-Pro\Obj #
+#                          \ -e --debug --core=plain --dptr=16,1              #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î #
+#                          ◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\z #
+#                          stack\Samples\GenericApp\CC2530DB\ -I              #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\SOURCE\ -I       #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\ZMAIN\TI25 #
+#                          30DB\ -I E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5 #
+#                          ”¶”√”Î◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Proj #
+#                          ects\zstack\Samples\GenericApp\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\MT\ -I E:\work\zigbee\taobao\»Ìº˛◊ #
+#                           ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂ #
+#                          øÿ÷∆LEDµ∆\Projects\zstack\Samples\GenericApp\CC253 #
+#                          0DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\ -I      #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\HAL\TARGET\CC2530EB\ -I                     #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\OSAL\MCU\CCSOC\ -I                          #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\OSAL\INCLUDE\ -I E:\work\zigbee\taobao\»Ìº˛ #
+#                          ◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœ #
+#                          ﬂøÿ÷∆LEDµ∆\Projects\zstack\Samples\GenericApp\CC25 #
+#                          30DB\..\..\..\..\..\COMPONENTS\STACK\AF\ -I        #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\STACK\NWK\ -I E:\work\zigbee\taobao\»Ìº˛◊ ¡ #
+#                          œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ #
+#                          ÷∆LEDµ∆\Projects\zstack\Samples\GenericApp\CC2530D #
+#                          B\..\..\..\..\..\COMPONENTS\STACK\SEC\ -I          #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\STACK\SAPI\ -I E:\work\zigbee\taobao\»Ìº˛◊  #
+#                          ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂø #
+#                          ÿ÷∆LEDµ∆\Projects\zstack\Samples\GenericApp\CC2530 #
+#                          DB\..\..\..\..\..\COMPONENTS\STACK\SYS\ -I         #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\STACK\ZDO\ -I E:\work\zigbee\taobao\»Ìº˛◊ ¡ #
+#                          œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ #
+#                          ÷∆LEDµ∆\Projects\zstack\Samples\GenericApp\CC2530D #
+#                          B\..\..\..\..\..\COMPONENTS\ZMAC\F8W\ -I           #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\ZMAC\ -I E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑ #
+#                          ¢¿˝≥Ã\5”¶”√”Î◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LED #
+#                          µ∆\Projects\zstack\Samples\GenericApp\CC2530DB\..\ #
+#                          ..\..\..\..\COMPONENTS\SERVICES\SADDR\ -I          #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\SERVICES\SDATA\ -I                          #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\MAC\INCLUDE\ -I E:\work\zigbee\taobao\»Ìº˛◊ #
+#                           ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂ #
+#                          øÿ÷∆LEDµ∆\Projects\zstack\Samples\GenericApp\CC253 #
+#                          0DB\..\..\..\..\..\COMPONENTS\MAC\HIGH_LEVEL\ -I   #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\MAC\LOW_LEVEL\srf04\ -I                     #
+#                          E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\..\..\..\..\..\COMP #
+#                          ONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz       #
+#                          --require_prototypes                               #
+#    List file          =  E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\EndDeviceEB-Pro\Lis #
+#                          t\GenericApp.lst                                   #
+#    Object file        =  E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ #
+#                          ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zsta #
+#                          ck\Samples\GenericApp\CC2530DB\EndDeviceEB-Pro\Obj #
+#                          \GenericApp.r51                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zstack\Samples\GenericApp\Source\GenericApp.c
+      1          /**************************************************************************************************
+      2            Filename:       GenericApp.c
+      3            Revised:        $Date: 2009-03-18 15:56:27 -0700 (Wed, 18 Mar 2009) $
+      4            Revision:       $Revision: 19453 $
+      5          
+      6            Description:    Generic Application (no Profile).
+      7          
+      8          
+      9            Copyright 2004-2009 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED ìAS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com. 
+     38          **************************************************************************************************/
+     39          
+     40          /*********************************************************************
+     41            This application isn't intended to do anything useful, it is
+     42            intended to be a simple example of an application's structure.
+     43          
+     44            This application sends "Hello World" to another "Generic"
+     45            application every 15 seconds.  The application will also
+     46            receive "Hello World" packets.
+     47          
+     48            The "Hello World" messages are sent/received as MSG type message.
+     49          
+     50            This applications doesn't have a profile, so it handles everything
+     51            directly - itself.
+     52          
+     53            Key control:
+     54              SW1:
+     55              SW2:  initiates end device binding
+     56              SW3:
+     57              SW4:  initiates a match description request
+     58          *********************************************************************/
+     59          
+     60          /*********************************************************************
+     61           * INCLUDES
+     62           */
+     63          #include "OSAL.h"
+     64          #include "AF.h"
+     65          #include "ZDApp.h"
+     66          #include "ZDObject.h"
+     67          #include "ZDProfile.h"
+     68          
+     69          #include "GenericApp.h"
+     70          #include "DebugTrace.h"
+     71          
+     72          #if !defined( WIN32 )
+     73            #include "OnBoard.h"
+     74          #endif
+     75          
+     76          /* HAL */
+     77          #include "hal_lcd.h"
+     78          #include "hal_led.h"
+     79          #include "hal_key.h"
+     80          #include "hal_uart.h"
+     81          
+     82          /*********************************************************************
+     83           * MACROS
+     84           */
+     85          #define HAL_LED_OFF   1
+     86          #define HAL_LED_ON    0
+     87          
+     88          // This is the max byte count per OTA message.
+     89          #if !defined( SERIAL_APP_TX_MAX )
+     90          #define SERIAL_APP_TX_MAX  80
+     91          #endif
+     92          
+     93          /*********************************************************************
+     94           * CONSTANTS
+     95           */
+     96          
+     97          /*********************************************************************
+     98           * TYPEDEFS
+     99           */
+    100          
+    101          /*********************************************************************
+    102           * GLOBAL VARIABLES
+    103           */
+    104          
+    105          // This list should be filled with Application specific Cluster IDs.
+    106          const cId_t GenericApp_ClusterList[GENERICAPP_MAX_CLUSTERS] =
+    107          {
+    108            GENERICAPP_CLUSTERID
+    109          };
+    110          
+    111          const SimpleDescriptionFormat_t GenericApp_SimpleDesc =
+    112          {
+    113            GENERICAPP_ENDPOINT,              //  int Endpoint;
+    114            GENERICAPP_PROFID,                //  uint16 AppProfId[2];
+    115            GENERICAPP_DEVICEID,              //  uint16 AppDeviceId[2];
+    116            GENERICAPP_DEVICE_VERSION,        //  int   AppDevVer:4;
+    117            GENERICAPP_FLAGS,                 //  int   AppFlags:4;
+    118            GENERICAPP_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+    119            (cId_t *)GenericApp_ClusterList,  //  byte *pAppInClusterList;
+    120            GENERICAPP_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+    121            (cId_t *)GenericApp_ClusterList   //  byte *pAppInClusterList;
+    122          };
+    123          
+    124          // This is the Endpoint/Interface description.  It is defined here, but
+    125          // filled-in in GenericApp_Init().  Another way to go would be to fill
+    126          // in the structure here and make it a "const" (in code space).  The
+    127          // way it's defined in this sample app it is define in RAM.
+    128          endPointDesc_t GenericApp_epDesc;
+    129          
+    130          /*********************************************************************
+    131           * EXTERNAL VARIABLES
+    132           */
+    133          
+    134          /*********************************************************************
+    135           * EXTERNAL FUNCTIONS
+    136           */
+    137          
+    138          /*********************************************************************
+    139           * LOCAL VARIABLES
+    140           */
+    141          byte GenericApp_TaskID;   // Task ID for internal task/event processing
+    142                                    // This variable will be received when
+    143                                    // GenericApp_Init() is called.
+    144          devStates_t GenericApp_NwkState;
+    145          
+    146          
+    147          byte GenericApp_TransID;  // This is the unique message ID (counter)
+    148          
+    149          afAddrType_t GenericApp_DstAddr;
+    150          byte RxBuf[SERIAL_APP_TX_MAX+1];
+    151          static uint8 SerialApp_TxLen;
+    152          
+    153          /*********************************************************************
+    154           * LOCAL FUNCTIONS
+    155           */
+    156          void GenericApp_ProcessZDOMsgs( zdoIncomingMsg_t *inMsg );
+    157          void GenericApp_HandleKeys( byte shift, byte keys );
+    158          void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pckt );
+    159          void GenericApp_SendTheMessage( void );
+    160          void rxCB(uint8 port,uint8 event);
+    161          
+    162          /*********************************************************************
+    163           * NETWORK LAYER CALLBACKS
+    164           */
+    165          
+    166          /*********************************************************************
+    167           * PUBLIC FUNCTIONS
+    168           */
+    169          
+    170          /*********************************************************************
+    171           * @fn      GenericApp_Init
+    172           *
+    173           * @brief   Initialization function for the Generic App Task.
+    174           *          This is called during initialization and should contain
+    175           *          any application specific initialization (ie. hardware
+    176           *          initialization/setup, table initialization, power up
+    177           *          notificaiton ... ).
+    178           *
+    179           * @param   task_id - the ID assigned by OSAL.  This ID should be
+    180           *                    used to send messages and set timers.
+    181           *
+    182           * @return  none
+    183           */
+    184          void GenericApp_Init( byte task_id )
+    185          {
+    186            halUARTCfg_t uartConfig;
+    187            
+    188            GenericApp_TaskID = task_id;
+    189            GenericApp_NwkState = DEV_INIT;
+    190            GenericApp_TransID = 0;
+    191          
+    192            // Device hardware initialization can be added here or in main() (Zmain.c).
+    193            // If the hardware is application specific - add it here.
+    194            // If the hardware is other parts of the device add it in main().
+    195          
+    196            GenericApp_DstAddr.addrMode = (afAddrMode_t)AddrNotPresent;
+    197            GenericApp_DstAddr.endPoint = 0;
+    198            GenericApp_DstAddr.addr.shortAddr = 0;
+    199          
+    200            // Fill out the endpoint description.
+    201            GenericApp_epDesc.endPoint = GENERICAPP_ENDPOINT;
+    202            GenericApp_epDesc.task_id = &GenericApp_TaskID;
+    203            GenericApp_epDesc.simpleDesc
+    204                      = (SimpleDescriptionFormat_t *)&GenericApp_SimpleDesc;
+    205            GenericApp_epDesc.latencyReq = noLatencyReqs;
+    206          
+    207            // Register the endpoint description with the AF
+    208            afRegister( &GenericApp_epDesc );
+    209          
+    210            // Register for all key events - This app will handle all key events
+    211            RegisterForKeys( GenericApp_TaskID );
+    212            
+    213            uartConfig.configured           = TRUE;              // 2x30 don't care - see uart driver.
+    214            uartConfig.baudRate             = HAL_UART_BR_115200;
+    215            uartConfig.flowControl          = FALSE;
+    216            uartConfig.flowControlThreshold = 64;   // 2x30 don't care - see uart driver.
+    217            uartConfig.rx.maxBufSize        = 128;  // 2x30 don't care - see uart driver.
+    218            uartConfig.tx.maxBufSize        = 128;  // 2x30 don't care - see uart driver.
+    219            uartConfig.idleTimeout          = 6;    // 2x30 don't care - see uart driver.
+    220            uartConfig.intEnable            = TRUE; // 2x30 don't care - see uart driver.
+    221            uartConfig.callBackFunc         = rxCB;
+    222            HalUARTOpen (0, &uartConfig); 
+    223            
+    224            // Update the display
+    225          #if defined ( LCD_SUPPORTED )
+    226              HalLcdWriteString( "GenericApp", HAL_LCD_LINE_1 );
+    227          #endif
+    228              
+    229            //ZDO_RegisterForZDOMsg( GenericApp_TaskID, End_Device_Bind_rsp );
+    230            //ZDO_RegisterForZDOMsg( GenericApp_TaskID, Match_Desc_rsp );
+    231          }
+    232          
+    233          /*********************************************************************
+    234           * @fn      GenericApp_ProcessEvent
+    235           *
+    236           * @brief   Generic Application Task event processor.  This function
+    237           *          is called to process all events for the task.  Events
+    238           *          include timers, messages and any other user defined events.
+    239           *
+    240           * @param   task_id  - The OSAL assigned task ID.
+    241           * @param   events - events to process.  This is a bit map and can
+    242           *                   contain more than one event.
+    243           *
+    244           * @return  none
+    245           */
+    246          UINT16 GenericApp_ProcessEvent( byte task_id, UINT16 events )
+    247          {
+    248            afIncomingMSGPacket_t *MSGpkt;
+    249            afDataConfirm_t *afDataConfirm;
+    250          
+    251            // Data Confirmation message fields
+    252            byte sentEP;
+    253            ZStatus_t sentStatus;
+    254            byte sentTransID;       // This should match the value sent
+    255            (void)task_id;  // Intentionally unreferenced parameter
+    256          
+    257            if ( events & SYS_EVENT_MSG )
+    258            {
+    259              MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( GenericApp_TaskID );
+    260              while ( MSGpkt )
+    261              {
+    262                switch ( MSGpkt->hdr.event )
+    263                {
+    264                  case ZDO_CB_MSG:
+    265                    GenericApp_ProcessZDOMsgs( (zdoIncomingMsg_t *)MSGpkt );
+    266                    break;
+    267                    
+    268                  case KEY_CHANGE:
+    269                    GenericApp_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+    270                    break;
+    271          
+    272                  case AF_DATA_CONFIRM_CMD:
+    273                    // This message is received as a confirmation of a data packet sent.
+    274                    // The status is of ZStatus_t type [defined in ZComDef.h]
+    275                    // The message fields are defined in AF.h
+    276                    afDataConfirm = (afDataConfirm_t *)MSGpkt;
+    277                    sentEP = afDataConfirm->endpoint;
+    278                    sentStatus = afDataConfirm->hdr.status;
+    279                    sentTransID = afDataConfirm->transID;
+    280                    (void)sentEP;
+    281                    (void)sentTransID;
+    282          
+    283                    // Action taken when confirmation is received.
+    284                    if ( sentStatus != ZSuccess )
+    285                    {
+    286                      // The data wasn't delivered -- Do something
+    287                    }
+    288                    break;
+    289          
+    290                  case AF_INCOMING_MSG_CMD:
+    291                    GenericApp_MessageMSGCB( MSGpkt );
+    292                    break;
+    293          
+    294                  case ZDO_STATE_CHANGE:
+    295                    GenericApp_NwkState = (devStates_t)(MSGpkt->hdr.status);
+    296                    /*if ( (GenericApp_NwkState == DEV_ZB_COORD)
+    297                        || (GenericApp_NwkState == DEV_ROUTER)
+    298                        || (GenericApp_NwkState == DEV_END_DEVICE) )
+    299                    {
+    300                      // Start sending "the" message in a regular interval.
+    301                      osal_start_timerEx( GenericApp_TaskID,
+    302                                          GENERICAPP_SEND_MSG_EVT,
+    303                                        GENERICAPP_SEND_MSG_TIMEOUT );
+    304                    }*/
+    305                    break;
+    306          
+    307                  default:
+    308                    break;
+    309                }
+    310          
+    311                // Release the memory
+    312                osal_msg_deallocate( (uint8 *)MSGpkt );
+    313          
+    314                // Next
+    315                MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( GenericApp_TaskID );
+    316              }
+    317          
+    318              // return unprocessed events
+    319              return (events ^ SYS_EVENT_MSG);
+    320            }
+    321          
+    322            // Send a message out - This event is generated by a timer
+    323            //  (setup in GenericApp_Init()).
+    324            if ( events & GENERICAPP_SEND_MSG_EVT )
+    325            {
+    326              // Send "the" message
+    327              GenericApp_SendTheMessage();
+    328          
+    329              // Setup to send message again
+    330              osal_start_timerEx( GenericApp_TaskID,
+    331                                  GENERICAPP_SEND_MSG_EVT,
+    332                                GENERICAPP_SEND_MSG_TIMEOUT );
+    333          
+    334              // return unprocessed events
+    335              return (events ^ GENERICAPP_SEND_MSG_EVT);
+    336            }
+    337          
+    338            // Discard unknown events
+    339            return 0;
+    340          }
+    341          
+    342          /*********************************************************************
+    343           * Event Generation Functions
+    344           */
+    345          
+    346          /*********************************************************************
+    347           * @fn      GenericApp_ProcessZDOMsgs()
+    348           *
+    349           * @brief   Process response messages
+    350           *
+    351           * @param   none
+    352           *
+    353           * @return  none
+    354           */
+    355          void GenericApp_ProcessZDOMsgs( zdoIncomingMsg_t *inMsg )
+    356          {
+    357            switch ( inMsg->clusterID )
+    358            {
+    359              case End_Device_Bind_rsp:
+    360                if ( ZDO_ParseBindRsp( inMsg ) == ZSuccess )
+    361                {
+    362                  // Light LED
+    363                  HalLedSet( HAL_LED_4, HAL_LED_MODE_ON );
+    364                }
+    365          #if defined(BLINK_LEDS)
+    366                else
+    367                {
+    368                  // Flash LED to show failure
+    369                  HalLedSet ( HAL_LED_4, HAL_LED_MODE_FLASH );
+    370                }
+    371          #endif
+    372                break;
+    373          
+    374              case Match_Desc_rsp:
+    375                {
+    376                  ZDO_ActiveEndpointRsp_t *pRsp = ZDO_ParseEPListRsp( inMsg );
+    377                  if ( pRsp )
+    378                  {
+    379                    if ( pRsp->status == ZSuccess && pRsp->cnt )
+    380                    {
+    381                      GenericApp_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
+    382                      GenericApp_DstAddr.addr.shortAddr = pRsp->nwkAddr;
+    383                      // Take the first endpoint, Can be changed to search through endpoints
+    384                      GenericApp_DstAddr.endPoint = pRsp->epList[0];
+    385          
+    386                      // Light LED
+    387                      HalLedSet( HAL_LED_4, HAL_LED_MODE_ON );
+    388                    }
+    389                    osal_mem_free( pRsp );
+    390                  }
+    391                }
+    392                break;
+    393            }
+    394          }
+    395          
+    396          /*********************************************************************
+    397           * @fn      GenericApp_HandleKeys
+    398           *
+    399           * @brief   Handles all key events for this device.
+    400           *
+    401           * @param   shift - true if in shift/alt.
+    402           * @param   keys - bit field for key events. Valid entries:
+    403           *                 HAL_KEY_SW_4
+    404           *                 HAL_KEY_SW_3
+    405           *                 HAL_KEY_SW_2
+    406           *                 HAL_KEY_SW_1
+    407           *
+    408           * @return  none
+    409           */
+    410          void GenericApp_HandleKeys( byte shift, byte keys )
+    411          {
+    412            zAddrType_t dstAddr;
+    413            
+    414            // Shift is used to make each button/switch dual purpose.
+    415            if ( shift )
+    416            {
+    417              if ( keys & HAL_KEY_SW_1 )
+    418              {
+    419              }
+    420              if ( keys & HAL_KEY_SW_2 )
+    421              {
+    422              }
+    423              if ( keys & HAL_KEY_SW_3 )
+    424              {
+    425              }
+    426              if ( keys & HAL_KEY_SW_4 )
+    427              {
+    428              }
+    429            }
+    430            else
+    431            {
+    432              if ( keys & HAL_KEY_SW_1 )
+    433              {
+    434              }
+    435          
+    436              if ( keys & HAL_KEY_SW_2 )
+    437              {
+    438                HalLedSet ( HAL_LED_4, HAL_LED_MODE_OFF );
+    439          
+    440                // Initiate an End Device Bind Request for the mandatory endpoint
+    441                dstAddr.addrMode = Addr16Bit;
+    442                dstAddr.addr.shortAddr = 0x0000; // Coordinator
+    443                ZDP_EndDeviceBindReq( &dstAddr, NLME_GetShortAddr(), 
+    444                                      GenericApp_epDesc.endPoint,
+    445                                      GENERICAPP_PROFID,
+    446                                      GENERICAPP_MAX_CLUSTERS, (cId_t *)GenericApp_ClusterList,
+    447                                      GENERICAPP_MAX_CLUSTERS, (cId_t *)GenericApp_ClusterList,
+    448                                      FALSE );
+    449              }
+    450          
+    451              if ( keys & HAL_KEY_SW_3 )
+    452              {
+    453              }
+    454          
+    455              if ( keys & HAL_KEY_SW_4 )
+    456              {
+    457                HalLedSet ( HAL_LED_4, HAL_LED_MODE_OFF );
+    458                // Initiate a Match Description Request (Service Discovery)
+    459                dstAddr.addrMode = AddrBroadcast;
+    460                dstAddr.addr.shortAddr = NWK_BROADCAST_SHORTADDR;
+    461                ZDP_MatchDescReq( &dstAddr, NWK_BROADCAST_SHORTADDR,
+    462                                  GENERICAPP_PROFID,
+    463                                  GENERICAPP_MAX_CLUSTERS, (cId_t *)GenericApp_ClusterList,
+    464                                  GENERICAPP_MAX_CLUSTERS, (cId_t *)GenericApp_ClusterList,
+    465                                  FALSE );
+    466              }
+    467            }
+    468          }
+    469          
+    470          /*********************************************************************
+    471           * LOCAL FUNCTIONS
+    472           */
+    473          
+    474          /*********************************************************************
+    475           * @fn      GenericApp_MessageMSGCB
+    476           *
+    477           * @brief   Data message processor callback.  This function processes
+    478           *          any incoming data - probably from other devices.  So, based
+    479           *          on cluster ID, perform the intended action.
+    480           *
+    481           * @param   none
+    482           *
+    483           * @return  none
+    484           */
+    485          void GenericApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
+    486          {
+    487            byte data ;
+    488               
+    489            switch ( pkt->clusterId )
+    490            {
+    491              case GENERICAPP_CLUSTERID:
+    492          #if defined(ZDO_COORDINATOR)
+    493                // "the" message
+    494            #if defined( LCD_SUPPORTED )
+    495                  HalLcdWriteScreen( (char*)pkt->cmd.Data, "rcvd" );
+    496            #elif defined( WIN32 )
+    497                  WPRINTSTR( pkt->cmd.Data );
+    498            #endif
+    499          
+    500          #else     
+    501               data  = pkt->cmd.Data[0];    //osal_memcpy(&data, pkt->cmd.Data, 1);
+    502              df 
+                     ^
+Error[Pe020]: identifier "df" is undefined
+    503               if(data == 0x10)
+                      ^
+Error[Pe065]: expected a ";"
+    504                 HalLedSet(HAL_LED_1, HAL_LED_ON); 
+    505               else if(data == 0x11)
+                      ^
+Error[Pe127]: expected a statement
+    506                 HalLedSet(HAL_LED_1, HAL_LED_OFF); 
+    507               
+    508               else if(data == 0x20)
+                      ^
+Error[Pe127]: expected a statement
+    509                 HalLedSet(HAL_LED_2, HAL_LED_ON); 
+    510               else if(data == 0x21)
+                      ^
+Error[Pe127]: expected a statement
+    511                 HalLedSet(HAL_LED_2, HAL_LED_OFF); 
+    512               
+    513               else if(data == 0x30)
+                      ^
+Error[Pe127]: expected a statement
+    514                 HalLedSet(HAL_LED_3, HAL_LED_ON); 
+    515               else if(data == 0x31)
+                      ^
+Error[Pe127]: expected a statement
+
+    byte data ;
+         ^
+"E:\work\zigbee\taobao\»Ìº˛◊ ¡œ\ø™∑¢¿˝≥Ã\5”¶”√”Î◊ÈÕ¯\15.ª˘”⁄GenericApp¥Æø⁄Œﬁœﬂøÿ÷∆LEDµ∆\Projects\zstack\Samples\GenericApp\Source\GenericApp.c",487  Warning[Pe550]: 
+          variable "data" was set but never used
+    516                 HalLedSet(HAL_LED_3, HAL_LED_OFF);         
+    517                
+    518          #endif
+    519               
+    520          #if defined(ZDO_ENDDEVICE)
+    521          dfdf
+    522          #endif     
+    523               
+    524                break;
+    525            }
+    526          }
+    527          
+    528          /*********************************************************************
+    529           * @fn      GenericApp_SendTheMessage
+    530           *
+    531           * @brief   Send "the" message.
+    532           *
+    533           * @param   none
+    534           *
+    535           * @return  none
+    536           */
+    537          void GenericApp_SendTheMessage( void )
+    538          {
+    539            afAddrType_t P2P_DstAddr;
+    540            P2P_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
+    541            P2P_DstAddr.endPoint = GENERICAPP_ENDPOINT;
+    542            P2P_DstAddr.addr.shortAddr = 0xFFFF; //÷’∂À∂Ãµÿ÷∑‘⁄LCD…œ”–œ‘ æ£¨¥À¥¶ªª≥…÷’∂À∂Ãµÿ÷∑æÕø…“‘µ„≤•¡À°£
+    543          
+    544            if ( AF_DataRequest( &P2P_DstAddr, &GenericApp_epDesc,
+    545                                 GENERICAPP_CLUSTERID,
+    546                                 1,
+    547                                 RxBuf,
+    548                                 &GenericApp_TransID,
+    549                                 AF_DISCV_ROUTE, AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+    550            {
+    551              // Successfully requested to be sent.
+    552            }
+    553            else
+    554            {
+    555              // Error occurred in request to send.
+    556            }
+    557          }
+    558          
+    559          static void rxCB(uint8 port,uint8 event)
+    560          {
+    561            if ((event & (HAL_UART_RX_FULL | HAL_UART_RX_ABOUT_FULL | HAL_UART_RX_TIMEOUT)) &&
+    562          #if SERIAL_APP_LOOPBACK
+    563                (SerialApp_TxLen < SERIAL_APP_TX_MAX))
+    564          #else
+    565                !SerialApp_TxLen)
+    566          #endif
+    567            {
+    568              SerialApp_TxLen = HalUARTRead(0, RxBuf, SERIAL_APP_TX_MAX);
+    569              if (SerialApp_TxLen)
+    570              {
+    571                HalUARTWrite(0, RxBuf, SerialApp_TxLen);
+    572                GenericApp_SendTheMessage();
+    573                
+    574                SerialApp_TxLen=0;
+    575              }
+    576            }
+    577          }
+    578          /*********************************************************************
+    579          *********************************************************************/
+
+Errors: 7
+Warnings: 1
