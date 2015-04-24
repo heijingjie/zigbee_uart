@@ -41,3 +41,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+Projects/zstack/Samples/GenericApp/CC2530DB/CoordinatorEB/
+Projects/zstack/Samples/GenericApp/CC2530DB/CoordinatorEB-Pro/
+Projects/zstack/Samples/GenericApp/CC2530DB/EndDeviceEB-Pro/
+Projects/zstack/Samples/GenericApp/CC2530DB/RouterEB-Pro/
+Projects/zstack/Samples/GenericApp/CC2530DB/EndDeviceEB-Pro/List/
+
+*.bat
